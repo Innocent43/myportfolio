@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const [active, setActive] = useState(false);
@@ -17,21 +16,24 @@ function Navbar() {
         <p className="hamburger" onClick={toggle}>
           x
         </p>
-        <NavLink to="/" onClick={toggle}>
+
+        <a href="#home" onClick={toggle}>
           Home
-        </NavLink>
-        <NavLink to="/about" onClick={toggle}>
+        </a>
+        <a href="#about" onClick={toggle}>
           About
-        </NavLink>
-        <NavLink to="/projects" onClick={toggle}>
+        </a>
+
+        <a href="#Projects" onClick={toggle}>
           Projects
-        </NavLink>
-        <NavLink to="/contact" onClick={toggle}>
+        </a>
+
+        <a href="#contact" onClick={toggle}>
           Contact
-        </NavLink>
-        <NavLink to="/tasks" onClick={toggle}>
+        </a>
+        <a href="#task" onClick={toggle}>
           Tasks
-        </NavLink>
+        </a>
       </nav>
     </div>
   );
